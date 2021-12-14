@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url:  jdbc:mysql://localhost:3306/blogEngine?serverTimezone=Europe/Moscow&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: testtest
+  jpa:
+    hibernate:
+      ddl-auto: create
