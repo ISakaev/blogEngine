@@ -21,8 +21,9 @@ public class Post {
     @Column(name = "moderation_status", nullable = false)
     private ModerationStatus moderationStatus;
 
-    @Column(name = "moderation_id")
-    private Integer moderator;
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "moderator_id", referencedColumnName="id")
+    private User moderator;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private User user;
